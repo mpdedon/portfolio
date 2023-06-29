@@ -1,0 +1,16 @@
+from django import forms
+from .models import Project
+
+class ProjectForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = ['title', 'description', 'image', 'technology', 'github_link']
+
+
+from django import forms
+from .models import Project
+
+class ProjectForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = ('title', 'description', 'category', 'github_link', 'image')
